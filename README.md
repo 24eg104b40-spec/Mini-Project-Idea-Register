@@ -7,28 +7,22 @@ A beginner-friendly full-stack CRUD application for storing student mini-project
 - Java 17 or later
 - Maven
 - Node.js and npm
-- MySQL
+- No database installation required; H2 runs locally inside the backend
 
-## Create the MySQL database
+## Local H2 database
 
-Open MySQL and run:
+The application uses an embedded file-based H2 database. It stores data in
+`backend/data/project_idea_db` and creates the `projects` table automatically
+through JPA/Hibernate. No MySQL setup or credentials are required.
 
-```sql
-CREATE DATABASE project_idea_db;
+The optional H2 console is available at `http://localhost:8080/h2-console`.
+Use these values to connect:
+
+```text
+JDBC URL: jdbc:h2:file:./data/project_idea_db
+User Name: sa
+Password: (empty)
 ```
-
-The application creates the `projects` table automatically through JPA/Hibernate.
-
-## Configure MySQL credentials
-
-Open [backend/src/main/resources/application.properties](backend/src/main/resources/application.properties) and replace:
-
-```properties
-spring.datasource.username=YOUR_MYSQL_USERNAME
-spring.datasource.password=YOUR_MYSQL_PASSWORD
-```
-
-Use the username and password from your local MySQL installation.
 
 ## Run the backend
 
