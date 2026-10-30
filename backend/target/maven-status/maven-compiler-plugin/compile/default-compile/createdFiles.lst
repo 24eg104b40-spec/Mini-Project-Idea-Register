@@ -1,5 +1,0 @@
-com\example\projectregister\repository\ProjectRepository.class
-com\example\projectregister\service\ProjectService.class
-com\example\projectregister\controller\ProjectController.class
-com\example\projectregister\entity\Project.class
-com\example\projectregister\ProjectRegisterApplication.class
